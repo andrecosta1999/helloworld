@@ -1,12 +1,5 @@
 package pt.iade.helloworld.models;
 
-import java.util.ArrayList;
-
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 
 public class CurricularUnit {
     private String name;
@@ -49,12 +42,4 @@ public class CurricularUnit {
         }
     }
     
-    private Logger logger = LoggerFactory.getLogger(CurricularUnit.class);
-    private ArrayList<CurricularUnit> units = new ArrayList<CurricularUnit>();
-    @PostMapping(path ="/units/")
-    public CurricularUnit saveUnit(@RequestBody CurricularUnit unit) {
-    logger.info("Added unit "+unit.getName());
-    units.add(unit);
-    return unit;
-    }
 }
