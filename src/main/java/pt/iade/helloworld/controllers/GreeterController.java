@@ -16,4 +16,9 @@ public class GreeterController {
         logger.info("Saying Hello to "+name);
         return "Hello "+name;
     }
+    @GetMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)
+     public String getGreeting() {
+        logger.info("Saying Hello to the world");
+        return "Hello World";
+        }
 }
